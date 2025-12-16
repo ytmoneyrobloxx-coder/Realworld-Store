@@ -1,0 +1,192 @@
+/* Сброс стилей */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Фон страницы */
+body {
+    background: #0b0b0b;
+}
+
+/* Шапка сайта */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px;
+    background: #000;
+    border-bottom: 1px solid rgba(255, 0, 0, 0.3);
+}
+
+/* Логотип */
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: #ff1a1a;
+    text-shadow:
+        0 0 5px #ff1a1a,
+        0 0 10px #ff1a1a,
+        0 0 20px #ff0000,
+        0 0 40px #ff0000;
+}
+
+.logo span {
+    color: #ffffff;
+    text-shadow: none;
+}
+
+/* Навигация */
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    position: relative;
+    transition: 0.3s ease;
+}
+
+/* Кнопка "Главная" */
+.nav a.home {
+    color: #ff1a1a;
+    font-weight: bold;
+    text-shadow: 0 0 10px #ff1a1a;
+}
+
+.nav a.home:hover {
+    text-shadow: 0 0 20px #ff1a1a, 0 0 40px #ff0000;
+}
+
+/* Ховер для остальных пунктов */
+.nav a:hover {
+    color: #ff1a1a;
+    text-shadow: 0 0 10px #ff1a1a;
+}
+
+/* Блок авторизации */
+.auth {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* Общие стили кнопок */
+.auth a {
+    padding: 8px 18px;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 14px;
+    transition: 0.3s ease;
+}
+
+/* Кнопка Войти */
+.login {
+    color: #ffffff;
+    border: 1px solid #ff1a1a;
+    background: transparent;
+}
+
+.login:hover {
+    background: #ff1a1a;
+    box-shadow: 0 0 15px #ff1a1a;
+}
+
+/* Кнопка Регистрация */
+.register {
+    background: #ff1a1a;
+    color: #ffffff;
+    box-shadow: 0 0 15px #ff1a1a;
+}
+
+.register:hover {
+    background: #ff0000;
+    box-shadow: 0 0 25px #ff0000;
+}
+
+/* Адаптация под мобильные */
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        gap: 15px;
+        padding: 20px;
+    }
+
+    .nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .auth {
+        justify-content: center;
+    }
+}
+
+/* Главная страница */
+.main {
+    padding: 60px 40px;
+}
+
+/* Hero-блок */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Текст */
+.hero-text {
+    max-width: 550px;
+}
+
+.hero-text h1 {
+    font-size: 38px;
+    margin-bottom: 20px;
+    color: #ffffff;
+}
+
+.hero-text h1 span {
+    color: #ff1a1a;
+    text-shadow: 0 0 10px #ff1a1a, 0 0 25px #ff0000;
+}
+
+.hero-text p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #cccccc;
+}
+
+/* Картинка */
+.hero-image img {
+    max-width: 500px;
+    width: 100%;
+    border-radius: 14px;
+    box-shadow:
+        0 0 20px rgba(255, 0, 0, 0.3),
+        0 0 40px rgba(255, 0, 0, 0.2);
+}
+
+/* Адаптив */
+@media (max-width: 900px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-text h1 {
+        font-size: 32px;
+    }
+
+    .hero-image img {
+        max-width: 100%;
+    }
+}
