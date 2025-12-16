@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Регистрация Realworld</title>
+  <link rel="stylesheet" href="registration.css">
+</head>
+<body>
+
+  <div class="register-box">
+    <h1>Регистрация</h1>
+
+    <form id="registerForm" onsubmit="return false;">
+      
+      <div class="input-group">
+        <label for="nickname">Никнейм Realworld</label>
+        <input type="text" id="nickname" required>
+      </div>
+
+      <div class="input-group">
+        <label for="password">Пароль</label>
+        <input type="password" id="password" required>
+      </div>
+
+      <div class="input-group">
+        <label for="confirmPassword">Подтвердите пароль</label>
+        <input type="password" id="confirmPassword" required>
+      </div>
+
+      <div class="checkbox-group">
+        <input type="checkbox" id="ageCheck">
+        <label for="ageCheck">Мне есть 14 лет</label>
+      </div>
+
+      <!-- КНОПКА -->
+      <button type="button" id="submitBtn" disabled>
+        Создать аккаунт
+      </button>
+
+    </form>
+  </div>
+
+  <script src="registration.js"></script>
+</body>
+</html>

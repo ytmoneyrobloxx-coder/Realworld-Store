@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Вход Realworld</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+
+  <div class="login-box">
+    <h1>Вход</h1>
+
+    <form id="loginForm" onsubmit="return false;">
+
+      <div class="input-group">
+        <label for="nickname">Никнейм Realworld</label>
+        <input type="text" id="nickname" placeholder="Введите никнейм" required>
+      </div>
+
+      <div class="input-group">
+        <label for="password">Пароль</label>
+        <input type="password" id="password" placeholder="Введите пароль" required>
+      </div>
+
+      <button type="button" id="loginBtn">
+        Войти
+      </button>
+
+    </form>
+  </div>
+
+  <script src="login.js"></script>
+</body>
+</html>

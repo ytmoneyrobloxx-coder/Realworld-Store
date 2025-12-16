@@ -78,6 +78,36 @@ body {
     transition: 0.3s;
 }
 
+.user-account {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.username {
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+.logout {
+    padding: 8px 18px;
+    border-radius: 6px;
+    font-size: 14px;
+    text-decoration: none;
+    transition: 0.3s;
+    border: 1px solid #ff1a1a;
+    color: #ffffff;
+    background: transparent;
+    cursor: pointer;
+}
+
+.logout:hover {
+    background: #ff1a1a;
+    box-shadow: 0 0 15px #ff1a1a;
+}
+
+
 /* Войти */
 .login {
     border: 1px solid #ff1a1a;
@@ -193,4 +223,232 @@ body.desktop .hero-text h1 {
     .main {
         padding: 40px 20px;
     }
+}
+
+/* ===== КАК ПРОХОДИТ ПОКУПКА ===== */
+.how-buy {
+    max-width: 1000px;
+    margin: 80px auto 0;
+    padding: 40px;
+    background: #0f0f0f;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 0, 0, 0.25);
+    box-shadow:
+        0 0 20px rgba(255, 0, 0, 0.15),
+        inset 0 0 30px rgba(255, 0, 0, 0.05);
+}
+
+.how-buy h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+    color: #ff1a1a;
+    text-shadow: 0 0 10px #ff1a1a, 0 0 25px #ff0000;
+    text-align: center;
+}
+
+.how-buy p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #d0d0d0;
+    margin-bottom: 15px;
+}
+
+.how-buy span {
+    color: #ff1a1a;
+    font-weight: bold;
+    text-shadow: 0 0 8px #ff1a1a;
+}
+
+/* Важный текст */
+.how-buy .important {
+    margin-top: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    background: rgba(255, 26, 26, 0.1);
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+}
+
+/* Адаптация */
+body.mobile .how-buy {
+    padding: 25px;
+}
+
+body.mobile .how-buy h2 {
+    font-size: 26px;
+}
+
+body.mobile .how-buy p {
+    font-size: 15px;
+}
+
+/* ===== КАК СТАТЬ ПРОДАВЦОМ ===== */
+.how-sell {
+    max-width: 1000px;
+    margin: 60px auto 0;
+    padding: 40px;
+    background: #0f0f0f;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 0, 0, 0.25);
+    box-shadow:
+        0 0 20px rgba(255, 0, 0, 0.15),
+        inset 0 0 30px rgba(255, 0, 0, 0.05);
+}
+
+.how-sell h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+    color: #ff1a1a;
+    text-shadow: 0 0 10px #ff1a1a, 0 0 25px #ff0000;
+    text-align: center;
+}
+
+.how-sell p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #d0d0d0;
+    margin-bottom: 18px;
+}
+
+.how-sell span {
+    color: #ff1a1a;
+    font-weight: bold;
+    text-shadow: 0 0 8px #ff1a1a;
+}
+
+/* Важный акцент */
+.how-sell .important {
+    margin-top: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    background: rgba(255, 26, 26, 0.12);
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+}
+
+/* Адаптация */
+body.mobile .how-sell {
+    padding: 25px;
+}
+
+body.mobile .how-sell h2 {
+    font-size: 26px;
+}
+
+body.mobile .how-sell p {
+    font-size: 15px;
+}
+
+/* ===== КАК КУПИТЬ ВАЛЮТУ ===== */
+.how-buy-currency {
+    max-width: 1000px;
+    margin: 60px auto 0;
+    padding: 40px;
+    background: #0f0f0f;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 0, 0, 0.25);
+    box-shadow:
+        0 0 20px rgba(255, 0, 0, 0.15),
+        inset 0 0 30px rgba(255, 0, 0, 0.05);
+}
+
+.how-buy-currency h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+    color: #ff1a1a;
+    text-shadow: 0 0 10px #ff1a1a, 0 0 25px #ff0000;
+    text-align: center;
+}
+
+.how-buy-currency p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #d0d0d0;
+    margin-bottom: 18px;
+}
+
+.how-buy-currency span {
+    color: #ff1a1a;
+    font-weight: bold;
+    text-shadow: 0 0 8px #ff1a1a;
+}
+
+.how-buy-currency .important {
+    margin-top: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    background: rgba(255, 26, 26, 0.12);
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+}
+
+/* ===== КАК СТАТЬ ПРОДАВЦОМ ВАЛЮТЫ ===== */
+.how-sell-currency {
+    max-width: 1000px;
+    margin: 60px auto 80px;
+    padding: 40px;
+    background: #0f0f0f;
+    border-radius: 16px;
+    border: 1px solid rgba(255, 0, 0, 0.25);
+    box-shadow:
+        0 0 20px rgba(255, 0, 0, 0.15),
+        inset 0 0 30px rgba(255, 0, 0, 0.05);
+}
+
+.how-sell-currency h2 {
+    font-size: 32px;
+    margin-bottom: 25px;
+    color: #ff1a1a;
+    text-shadow: 0 0 10px #ff1a1a, 0 0 25px #ff0000;
+    text-align: center;
+}
+
+.how-sell-currency p {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #d0d0d0;
+    margin-bottom: 18px;
+}
+
+.how-sell-currency span {
+    color: #ff1a1a;
+    font-weight: bold;
+    text-shadow: 0 0 8px #ff1a1a;
+}
+
+.how-sell-currency .important {
+    margin-top: 25px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    text-align: center;
+    padding: 15px;
+    border-radius: 10px;
+    background: rgba(255, 26, 26, 0.12);
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.3);
+}
+
+/* ===== АДАПТАЦИЯ ===== */
+body.mobile .how-buy-currency,
+body.mobile .how-sell-currency {
+    padding: 25px;
+}
+
+body.mobile .how-buy-currency h2,
+body.mobile .how-sell-currency h2 {
+    font-size: 26px;
+}
+
+body.mobile .how-buy-currency p,
+body.mobile .how-sell-currency p {
+    font-size: 15px;
 }
