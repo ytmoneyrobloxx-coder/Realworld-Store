@@ -90,6 +90,61 @@ body {
     color: #ffffff;
 }
 
+.profile-menu {
+    position: relative;
+    display: inline-block;
+}
+
+.profile-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #ff1a1a;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.profile-avatar:hover {
+    box-shadow: 0 0 15px #ff1a1a;
+    transform: scale(1.05);
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    top: 100%;
+    background-color: #0f0f0f;
+    min-width: 180px;
+    box-shadow:
+        0 0 20px rgba(255, 0, 0, 0.3),
+        0 0 40px rgba(255, 0, 0, 0.2);
+    border: 1px solid rgba(255, 0, 0, 0.3);
+    border-radius: 8px;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+.dropdown-menu.show {
+    display: block;
+}
+
+.dropdown-item {
+    padding: 12px 16px;
+    color: #ffffff;
+    text-decoration: none;
+    display: block;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 14px;
+}
+
+.dropdown-item:hover {
+    background-color: #ff1a1a;
+    box-shadow: 0 0 10px rgba(255, 26, 26, 0.5);
+}
+
 .logout {
     padding: 8px 18px;
     border-radius: 6px;
@@ -103,7 +158,7 @@ body {
 }
 
 .logout:hover {
-    background: #ff1a1a;
+    background: #ff1a;
     box-shadow: 0 0 15px #ff1a1a;
 }
 
@@ -451,4 +506,270 @@ body.mobile .how-sell-currency h2 {
 body.mobile .how-buy-currency p,
 body.mobile .how-sell-currency p {
     font-size: 15px;
+}
+
+/* ===== СТРАНИЦА НАСТРОЕК ===== */
+.settings-main {
+    padding: 40px;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.settings-container h1 {
+    font-size: 32px;
+    color: #ff1a1a;
+    text-align: center;
+    margin-bottom: 30px;
+    text-shadow: 0 0 10px #ff1a1a, 0 0 25px #ff0000;
+}
+
+.settings-tabs {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 30px;
+    border-bottom: 1px solid rgba(255, 0, 0, 0.3);
+    padding-bottom: 10px;
+}
+
+.tab-button {
+    padding: 12px 24px;
+    background: #0f0f0f;
+    border: 1px solid rgba(255, 0, 0, 0.3);
+    color: #ffffff;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    font-size: 16px;
+}
+
+.tab-button:hover {
+    background: #ff1a1a;
+    box-shadow: 0 0 10px rgba(255, 26, 26, 0.5);
+}
+
+.tab-button.active {
+    background: #ff1a1a;
+    box-shadow: 0 0 15px #ff1a1a;
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.setting-section {
+    background: #0f0f0f;
+    padding: 25px;
+    border-radius: 12px;
+    margin-bottom: 25px;
+    border: 1px solid rgba(255, 0, 0, 0.25);
+    box-shadow:
+        0 0 20px rgba(255, 0, 0, 0.15),
+        inset 0 0 30px rgba(255, 0, 0, 0.05);
+}
+
+.setting-section h2 {
+    font-size: 24px;
+    color: #ff1a1a;
+    margin-bottom: 20px;
+    text-shadow: 0 0 8px #ff1a1a;
+}
+
+.profile-photo-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.large-profile-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #ff1a1a;
+    box-shadow: 0 0 20px rgba(255, 26, 26, 0.3);
+}
+
+.btn-change-photo {
+    padding: 10px 20px;
+    background: #ff1a1a;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+}
+
+.btn-change-photo:hover {
+    background: #ff0000;
+    box-shadow: 0 0 15px #ff0000;
+}
+
+.account-info {
+    width: 100%;
+}
+
+.info-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    padding: 10px;
+    background: rgba(30, 30, 0.5);
+    border-radius: 6px;
+}
+
+.info-row label {
+    width: 120px;
+    font-weight: bold;
+    color: #ff1a1a;
+}
+
+.info-row span {
+    flex-grow: 1;
+    color: #ffffff;
+}
+
+.info-row input {
+    flex-grow: 1;
+    padding: 8px 12px;
+    background: #1a1a1a;
+    border: 1px solid rgba(255, 0, 0, 0.3);
+    border-radius: 4px;
+    color: #ffffff;
+    margin-right: 10px;
+}
+
+.payment-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.payment-option {
+    display: flex;
+    align-items: center;
+    padding: 12px;
+    background: rgba(30, 30, 0.5);
+    border-radius: 6px;
+}
+
+.payment-option input[type="radio"] {
+    margin-right: 10px;
+    accent-color: #ff1a1a;
+}
+
+.payment-option label {
+    color: #ffffff;
+    cursor: pointer;
+}
+
+.btn-save {
+    padding: 10px 20px;
+    background: #ff1a1a;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    margin-top: 15px;
+}
+
+.btn-save:hover {
+    background: #ff0000;
+    box-shadow: 0 0 15px #ff0000;
+}
+
+.password-change {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.input-group label {
+    color: #ff1a1a;
+    font-weight: bold;
+}
+
+.input-group input {
+    padding: 10px 12px;
+    background: #1a1a1a;
+    border: 1px solid rgba(255, 0, 0, 0.3);
+    border-radius: 4px;
+    color: #ffffff;
+}
+
+/* Адаптивность для страницы настроек */
+body.mobile .settings-main {
+    padding: 20px;
+}
+
+body.mobile .settings-container h1 {
+    font-size: 26px;
+}
+
+body.mobile .setting-section {
+    padding: 15px;
+}
+
+body.mobile .info-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+body.mobile .info-row label {
+    width: auto;
+    margin-bottom: 5px;
+}
+
+body.mobile .payment-option {
+    flex-direction: row;
+    align-items: center;
+}
+
+/* ===== УВЕДОМЛЕНИЯ ===== */
+.notification {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 15px 25px;
+    border-radius: 8px;
+    color: white;
+    font-weight: bold;
+    box-shadow:
+        0 0 20px rgba(255, 0, 0, 0.3),
+        0 0 40px rgba(255, 0, 0, 0.2);
+    z-index: 10000;
+    transform: translateX(400px);
+    transition: transform 0.3s ease;
+    max-width: 300px;
+    word-wrap: break-word;
+}
+
+.notification.show {
+    transform: translateX(0);
+}
+
+.notification.success {
+    background: linear-gradient(45deg, #007700, #00aa00);
+}
+
+.notification.error {
+    background: linear-gradient(45deg, #770000, #aa0000);
+}
+
+.notification.info {
+    background: linear-gradient(45deg, #000077, #0000aa);
 }

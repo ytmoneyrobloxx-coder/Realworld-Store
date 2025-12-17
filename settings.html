@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Настройки - Realworld Store</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            Realworld <span>store</span>
+        </div>
+
+        <nav class="nav">
+            <a href="index.html" class="home">Главная</a>
+            <a href="#">Магазин</a>
+            <a href="#">О нас</a>
+            <a href="#">Стать продавцом</a>
+        </nav>
+
+        <div class="auth">
+            <!-- Содержимое будет обновлено через JavaScript -->
+        </div>
+    </header>
+
+    <main class="settings-main">
+        <div class="settings-container">
+            <h1>Настройки аккаунта</h1>
+            
+            <div class="settings-tabs">
+                <div class="tab-button active" data-tab="profile">Профиль</div>
+                <div class="tab-button" data-tab="payment">Оплата</div>
+                <div class="tab-button" data-tab="security">Безопасность</div>
+            </div>
+
+            <div class="settings-content">
+                <!-- Вкладка профиля -->
+                <div class="tab-content active" id="profile-tab">
+                    <div class="setting-section">
+                        <h2>Фото профиля</h2>
+                        <div class="profile-photo-section">
+                            <img id="currentProfileImage" src="" alt="Ваш аватар" class="large-profile-avatar">
+                            <input type="file" id="profilePhotoInput" accept="image/*" style="display: none;">
+                            <button id="changePhotoBtn" class="btn-change-photo">Изменить фото</button>
+                        </div>
+                    </div>
+
+                    <div class="setting-section">
+                        <h2>Информация об аккаунте</h2>
+                        <div class="account-info">
+                            <div class="info-row">
+                                <label>Ваш ник:</label>
+                                <span id="displayUsername"></span>
+                            </div>
+                            <div class="info-row">
+                                <label>Email:</label>
+                                <input type="email" id="emailInput" placeholder="Введите ваш email">
+                                <button id="saveEmailBtn" class="btn-save">Сохранить</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Вкладка оплаты -->
+                <div class="tab-content" id="payment-tab">
+                    <div class="setting-section">
+                        <h2>Способы оплаты</h2>
+                        <div class="payment-methods">
+                            <div class="payment-option">
+                                <input type="radio" id="pay_card" name="payment" value="card">
+                                <label for="pay_card">Банковская карта</label>
+                            </div>
+                            <div class="payment-option">
+                                <input type="radio" id="pay_crypto" name="payment" value="crypto">
+                                <label for="pay_crypto">Криптовалюта</label>
+                            </div>
+                            <div class="payment-option">
+                                <input type="radio" id="pay_phone" name="payment" value="phone">
+                                <label for="pay_phone">Оплата с телефона</label>
+                            </div>
+                        </div>
+                        <button id="savePaymentBtn" class="btn-save">Сохранить метод оплаты</button>
+                    </div>
+                </div>
+
+                <!-- Вкладка безопасности -->
+                <div class="tab-content" id="security-tab">
+                    <div class="setting-section">
+                        <h2>Смена пароля</h2>
+                        <div class="password-change">
+                            <div class="input-group">
+                                <label for="currentPassword">Текущий пароль</label>
+                                <input type="password" id="currentPassword" placeholder="Введите текущий пароль">
+                            </div>
+                            <div class="input-group">
+                                <label for="newPassword">Новый пароль</label>
+                                <input type="password" id="newPassword" placeholder="Введите новый пароль">
+                            </div>
+                            <div class="input-group">
+                                <label for="confirmNewPassword">Подтвердите новый пароль</label>
+                                <input type="password" id="confirmNewPassword" placeholder="Подтвердите новый пароль">
+                            </div>
+                            <button id="changePasswordBtn" class="btn-save">Сменить пароль</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="adaptive.js"></script>
+    <script src="settings.js"></script>
+</body>
+</html>
